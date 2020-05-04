@@ -1,0 +1,28 @@
+
+.NoteListPage {
+  margin-left: 50px;
+  color: lightgray;
+}
+
+.NoteItem {
+  border: 1px solid white;
+  padding: 0 200px 20px 100px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.NoteItem:hover {
+  background-color: black;
+}
+
+#AddNote {
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  cursor: pointer;
+}
+
+#DeleteNote {
+  padding: 10px;
+  cursor: pointer;
+}

@@ -1,0 +1,37 @@
+.App {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+#NotefulHeader {
+  align-self: center;
+  color: white;
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+button {
+  font-size: 1.1em;
+}
+
+button:hover {
+  background-color: black;
+  color: yellow;
+  border-color: black;
+}
+
+input[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: blueviolet;
+  border: 2px solid blueviolet;
+  color: white;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+  color: yellow;
+  background-color: green;
+  border: 2px solid green;
+}

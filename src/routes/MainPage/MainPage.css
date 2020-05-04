@@ -1,0 +1,13 @@
+
+.MainPage {
+  margin-top: 1%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  color: white;
+  font-weight: bold;
+  font-size: 1.4em;
+  list-style-type: none;
+}

@@ -1,0 +1,20 @@
+.FolderItem {
+  padding: 10px 50px;
+  cursor: pointer;
+  box-shadow: 3px 3px 5px 6px #ccc;
+  margin-bottom: 40px;
+}
+
+.FolderItem:hover {
+  background-color: black;
+}
+.FolderItem h1 {
+  color: yellow;
+}
+
+#AddFolder {
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px 0;
+  cursor: pointer;
+}
