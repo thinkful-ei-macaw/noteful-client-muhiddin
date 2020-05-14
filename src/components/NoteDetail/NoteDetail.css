@@ -1,0 +1,10 @@
+.NoteStuff {
+  color:  white;
+  margin: 0 20%;
+  padding: 20px;
+}
+
+.NoteContent {
+  border: 1px solid white;
+  padding: 20px;
+}

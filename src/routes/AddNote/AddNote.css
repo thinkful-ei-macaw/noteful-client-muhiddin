@@ -1,4 +1,4 @@
-.AddFolderForm {
+.AddNoteForm {
   color: yellow;
   font-size: 1.2em;
   font-weight: bold;
@@ -14,13 +14,7 @@
   outline: none;
 }
 
-.AddFolderSubmit {
+.AddNoteSubmit {
   text-align: right;
-}
-
-input[type="submit"] {
-  margin-right: 10px;
-  background-color: black;
-  border: 2px solid black;
 }
 

@@ -1,25 +1,30 @@
 import React, { Component } from 'react';
-import NoteContext from '../../contexts/NoteContext';
 import FolderApiService from '../../services/folder-api';
 import './FolderListPage.css';
 import { Link } from 'react-router-dom';
 
 export default class FolderListPage extends Component {
-  static contextType = NoteContext;
+  state = {
+    folders: []
+  }
 
   componentDidMount() {
     FolderApiService.getFolders()
-      .then(this.context.setFolders)
+      .then(folders => this.setState({ folders }));
   }
 
+  
   renderFolders() {
-    const { folders = [] } = this.context;
+    const { folders = [] } = this.state;
     return folders.map(folder => {
-        return (
-          <div key={folder.id} className="FolderItem">
-            <h1>{folder.name}</h1>
-          </div>
-        );
+      const folder_id = folder.folder_id;
+      return ( 
+        <Link to={`folders/${folder_id}/notes`} key={folder_id}>      
+          <div className="FolderItem">
+            <h1>{folder.folder_name}</h1>
+          </div>  
+        </Link>       
+      );
     })
   }
 

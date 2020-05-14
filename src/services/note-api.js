@@ -1,4 +1,6 @@
-import config from '../config'
+import config from '../config';
+
+
 
 const NoteApiService = {
   getNotes() {
@@ -30,6 +32,9 @@ const NoteApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
+      .catch((err) => {
+        console.log('error:', err);
+      })
   },
   getFolderNotes(folder_id) {
     return fetch(`${config.API_ENDPOINT}/folders/${folder_id}/notes`)
@@ -39,17 +44,16 @@ const NoteApiService = {
           : res.json()
       )
   },
-  addNote(name, modified, folder_id, content) {
+  postNote(note_name, content, folder_id) {
     return fetch(`${config.API_ENDPOINT}/notes`, {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
       },
       body: JSON.stringify({
-        name,
-        modified,
-        folder_id,
-        content
+        note_name,
+        content,
+        folder_id
       }),
     })
       .then(res =>

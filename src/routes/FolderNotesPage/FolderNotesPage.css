@@ -1,0 +1,18 @@
+.NoteDetail {
+  color:  white;
+  border: 1px solid white;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.FolderNotes {
+  margin: 0 20%;
+}
+
+.NoteDetail:hover {
+  background-color: rgb(221, 97, 97);
+}
+
+.hidden {
+  display: none;
+}
